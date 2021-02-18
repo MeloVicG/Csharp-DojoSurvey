@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+
+    @* @using DojoSurvey.Models *@
+    @* @model Survey *@
+    @model DojoSurvey.Models.Survey
+</head>
+<body>
+    <Form action="/">
+
+    <h2>Submitted Info</h2>
+        @* <div>
+            <label for="">YourName:  @ViewBag.name</label>
+        </div>
+        <div>
+        <label for="">Dojo Location: @ViewBag.location</label>
+        </div> 
+        <div>
+        <label for="">Favorate Language: @ViewBag.language</label>
+        </div>
+        <div>
+            <label for="">Comment: @ViewBag.comment</label>
+        </div> *@
+
+        @* @foreach(Survey dojo in Model) *@
+        @* { *@
+            <li>
+                dojo name: @Model.Name
+                dojo locaiton: @Model.Location
+                language: @Model.Language
+                comment: @Model.Comment
+            </li>
+        @* } *@
+
+
+        <h3><button>Go Back</button></h3>
+    </Form>
+</body>
+</html>
+</body>
+</html>

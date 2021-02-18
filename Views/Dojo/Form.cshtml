@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+
+@model DojoSurvey.Models.Survey
+<body>
+    <Form action="result" Method="post">
+        <div>
+            @* name="Name" for .ViewBag *@
+            <label asp-for="Name"></label>
+            <input asp-for="Name" name="Name"type="text">
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+             @* name="Location" for .ViewBag *@
+        <label asp-for="Location"></label>
+            <select asp-for="Location">
+                <option value="Seattle">Seattle</option>
+                <option value="SF">SF</option>
+                <option value="LA">LA</option>
+                <option value="Denver">Denver</option>
+            </select>
+            <span asp-validation-for="Location"></span>
+        </div> 
+
+        <div>
+        <label asp-for="Language"></label>
+            <select asp-for="Language">
+                <option value="Korean">Korean</option>
+                <option value="German">German</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+            </select>
+            <span asp-validation-for="Language"></span>
+        </div>
+
+        <div>
+            <label asp-for="Comment"></label>
+            <textarea asp-for="Comment" id="" cols="30" rows="10"></textarea>
+            <span asp-validation-for="Comment"></span>
+        </div>
+
+        <h3><button>Submit</button></h3>
+    </Form>
+</body>
+</html>
